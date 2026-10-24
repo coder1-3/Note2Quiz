@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Note2Quiz AI</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto;">
+    
+    <h1>📝 Note2Quiz AI</h1>
+    <p>Upload your study notes (.txt), and the AI will generate a quiz.</p>
+    
+    <!-- File Upload Form -->
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="note_file" accept=".txt" required>
+        <button type="submit" style="padding: 5px 15px; margin-left: 10px;">Generate Quiz</button>
+    </form>
+
+    <hr style="margin: 30px 0;">
+
+    <!-- Display Quiz if it exists -->
+    {% if quiz_content %}
+        <h2>🎯 Your Quiz</h2>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; white-space: pre-wrap;">{{ quiz_content }}</pre>
+    {% endif %}
+
+</body>
+</html>
