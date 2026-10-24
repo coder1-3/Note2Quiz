@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Note2Quiz | Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card result-card">
+        <h1>✅ Quiz Generated</h1>
+        
+        <div class="button-group">
+            <a href="{{ url_for('download') }}" class="btn success-btn">📥 Download File</a>
+            <a href="{{ url_for('index') }}" class="btn secondary-btn">Start Over</a>
+        </div>
+
+        <div class="preview-box">
+            <pre>{{ content }}</pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Note2Quiz | Configure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h1>⚙️ Configure Your Quiz</h1>
+        <p class="subtitle">Customize how you want your file generated.</p>
+        
+        <form method="POST" class="config-form">
+            <label>Number of Questions:</label>
+            <select name="questions" class="input-box">
+                <option value="3">3 Questions (Quick Test)</option>
+                <option value="5">5 Questions (Standard)</option>
+                <option value="10">10 Questions (Comprehensive)</option>
+            </select>
+
+            <label>Output Format:</label>
+            <select name="format" class="input-box">
+                <option value="txt">Standard Text (.txt)</option>
+                <option value="md">Markdown Document (.md)</option>
+                <option value="html">Web Page (.html)</option>
+            </select>
+
+            <button type="submit" class="btn primary-btn">Generate AI Quiz</button>
+        </form>
+    </div>
+</body>
+</html>
